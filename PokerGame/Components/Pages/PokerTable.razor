@@ -1,0 +1,55 @@
+﻿@page "/poker"
+
+<h3>Poker Game</h3>
+
+<div>
+    <label>Number of Players:</label>
+    <input type="number"
+        @bind="playerCount" min="2" max="8" />
+        <button @onclick="StartGame">StartGame</button>
+</div>
+
+@if (game.Players.Any())
+{
+    <h2>Current Turn:
+        @game.CurrentPlayer.Name
+    </h2>
+
+        <button @onclick="NextTurn">NextTurn</button>
+        <button @onclick ="Fold">Fold</button>
+    <hr />
+
+    @foreach (var player in game.Players)
+    {
+        <div style="margin-bottom: 15px; padding:10px; border: 1px solid gray;">
+            <h3>@player.Name
+                (@(player.Folded ? "Folded" : "Active"))</h3>
+            <p>Chips: @player.Chips</p>
+            <strong>Hand:</strong>
+            <ul>@foreach (var card in player.Hand)
+                {
+                    <li>@card.ToString()</li>
+                }
+            </ul>
+        </div>
+    }
+}
+@code {
+    private PokerGame game = new PokerGame();
+    private int playerCount = 4;
+
+    void StartGame()
+    {
+        game.StartGame(playerCount);
+    }
+
+    void NextTurn()
+    {
+        game.NextTurn();
+    }
+
+    void Fold()
+    {
+        game.Fold();
+    }
+}
