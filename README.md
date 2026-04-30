@@ -1,43 +1,21 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/qJo95Bxr)
-# CSCI 1260 — Project
+## PokerGame: This project I decided I was going to do poker on Blazor. Here the player will have to gain all the chips by knocking out other players.
 
-## Project Instructions
-All project requirements, grading criteria, and submission details are provided on **D2L**.  
-Refer to D2L as the *authoritative source* for this assignment.
+## Features You will have the option to pick how many players will be in the game. To start the next turn just click on the next turn button. To fold click the fold button and the player will fold. To win the game you must be the last player to not lose all your chips.
 
-This repository is intentionally minimal. You are responsible for:
-- Creating the solution and projects
-- Designing the class structure
-- Implementing the required functionality
+## Build Instructions requires NET.SDK
 
----
+Build the project with: dotnet build
 
-## Getting Started (CLI)
+##Run Instructions Run the game with: dotnet run
 
-You may use **Visual Studio**, **VS Code**, or the **terminal**.
+##Runtime Instructions Once the program starts running you will need to start the game and you have the option to choose how many players you want. To start the next turn you just need to click on the next button or you can click the fold button.
 
-### Create a solution
-```bash
-dotnet new sln -n ProjectName
-```
+## Win Condition To win the game you must be the last player to have all the chips
 
-### Create a project (example: console app)
-```bash
-dotnet new console -n ProjectName.App
-```
+## Lose Condition If you lost all your chips you are out of the game
 
-### Add the project to the solution
-```bash
-dotnet sln add ProjectName.App
-```
+## Project Structure PokerGame.Console Will hold most of the code
 
-### Build and run
-```bash
-dotnet build
-dotnet run --project ProjectName.App
-```
+## UML Diagram It should be called Poker.jpg
 
-## Notes
-- Commit early and commit often.
-- Your repository history is part of your submission.
-- Update this README with build/run instructions specific to your project.
+## Author Sid Pierce CSCI 1260 - Object Oriented Programming
